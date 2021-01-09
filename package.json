@@ -3,16 +3,19 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server:start": "nodemon server.js"
+    "server:start": "nodemon server.js",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^11.0.5",
+    "@angular/cli": "^11.0.5",
+    "@angular/compiler-cli": "~11.0.0-rc.0",
     "@angular/cdk": "^11.0.3",
     "@angular/common": "~11.0.0-rc.0",
     "@angular/compiler": "~11.0.0-rc.0",
@@ -32,7 +35,13 @@
     "multer": "^1.4.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "typescript": "~4.0.2",
+    "dotenv": "^8.2.0"
+  },
+  "engines": {
+    "node": "14.15.1",
+    "npm": "6.14.8"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1100.0-rc.0",

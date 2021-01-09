@@ -8,11 +8,14 @@ require('dotenv').config();
 
 const postsRoutes = require('./routes/posts');
 const userRoutes = require('./routes/user');
+const {
+  send
+} = require('process');
 
 const app = express();
 
 // Conecting to database through moongose
-mongoose.connect('mongodb+srv://admin:' + process.env.MONGO_ATLAS_PASSWORD +'@cluster0.ea8nz.mongodb.net/node-angular?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGO_ATLAS_PASSWORD, {
     useUnifiedTopology: true,
     useNewUrlParser: true
   })
@@ -30,7 +33,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 //any request targeting /images will be allowed
-app.use('/images', express.static(path.join('backend/images')));
+app.use('/images', express.static(path.join(__dirname, 'backend/images')));
+app.use('/', express.static(path.join(__dirname, 'angular')));
 
 // multer for file sending 
 
@@ -53,5 +57,9 @@ app.use((req, res, next) => {
 
 app.use('/api/posts', postsRoutes);
 app.use('/api/user', userRoutes);
+
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, 'angular', 'index.html'))
+});
 
 module.exports = app;
