@@ -1,4 +1,4 @@
-# MeanStock
+# This is an angular, mongo DB and node.js project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0-rc.0.
 
