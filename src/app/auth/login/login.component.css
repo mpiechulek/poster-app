@@ -1,0 +1,23 @@
+mat-card {
+    width: 30rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form h1 {
+    text-align: center;
+}
+
+mat-card form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin-top: 1rem;
+}

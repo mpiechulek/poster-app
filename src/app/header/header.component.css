@@ -1,0 +1,54 @@
+span a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+li button {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+li {
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #f0f0f0;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.router-link-color {
+    color: #ffea2c;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ ul li {
+    margin-right: 1rem;
+}
+
+button {
+    margin: 0;
+    margin-left: 1rem;;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    margin-left: 0.5rem;
+}

@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+    <span><a routerLink="/">My PoST-er</a></span>
+    <span class="spacer"></span>
+
+    <ul>
+        <li *ngIf="!userIsAuthenticated">
+            <a routerLink="/auth/login" routerLinkActive="router-link-color">Login</a>
+        </li>
+        
+        <li *ngIf="!userIsAuthenticated">
+            <a routerLink="/auth/signup" routerLinkActive="router-link-color">Signup</a>
+        </li>
+
+        <li *ngIf="userIsAuthenticated">
+            <a routerLink="/create" routerLinkActive="router-link-color">New Post</a>
+        </li>
+
+        <li *ngIf="userIsAuthenticated">
+            <button mat-button (click)="onLogout()">Logout</button>
+        </li>
+    </ul>
+
+    <mat-icon aria-hidden="true">account_circle</mat-icon>
+
+    <p>
+        {{userEmail}}
+    </p>
+    
+</mat-toolbar>
