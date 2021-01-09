@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "node backend/server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server:start": "nodemon server.js",
+    "server:start": "nodemon backend/server.js",
     "heroku-postbuild": "ng build --prod"
   },
   "private": true,
